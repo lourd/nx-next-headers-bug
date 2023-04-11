@@ -1,5 +1,7 @@
 # Nx - Next.js missing custom headers for public/ files bug reproduction
 
+Repro for https://github.com/nrwl/nx/issues/16237
+
 ## Execution
 
 - `npm install`
