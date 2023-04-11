@@ -1,0 +1,25 @@
+{
+  "name": "regression-repro-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/regression-repro-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "test": {
+      "executor": "@ns3/nx-jest-playwright:jest-playwright",
+      "options": {
+        "devServerTarget": "regression-repro:serve:production",
+        "jestConfig": "apps/regression-repro-e2e/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/regression-repro-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["regression-repro"]
+}
